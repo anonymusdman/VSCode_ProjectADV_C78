@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                Project Advance C78: Family Book
+            </title>
+            <body>
+                <h1>
+                    My Family Book
+                </h1>
+                
+                <img id="FAMILYMEMBERSIMAGE" style="width: 25%; height: 25%;"></img>
+                <p id="FAMILY MEMBER NAME"></p>
+                <button type="button" onclick="NEXTSLIDE()">Next</button>
+                <script>
+                    var FAMILYMEMBERSNAME=["Adway Patsute(Me)", "Dipali Patsute(Mom)", "Mahesh Patsute(Dad)", "Aboli Patsute(Little Sister)", "Sudhir Patsute(Dads second brother(The one on the bottom))", "Abhirup Patsute(Cousin Brother(The boy with the orange shirt))"];
+                    var NEXTSLIDE1=0;
+                    var updatedname=0;
+                    var FAMILYMEMBERSIMAGE = new Array();
+
+                    FAMILYMEMBERSIMAGE[0] = new Image();
+                    FAMILYMEMBERSIMAGE[0].src = "IMG_0218.JPG";
+
+                    FAMILYMEMBERSIMAGE[1] = new Image();
+                    FAMILYMEMBERSIMAGE[1].src = "Mom.jpeg";
+
+                    FAMILYMEMBERSIMAGE[2] = "I couldnt download my dads image";
+
+                    FAMILYMEMBERSIMAGE[3] = new Image();
+                    FAMILYMEMBERSIMAGE[3].src = "Aboli.jpeg";
+
+                    FAMILYMEMBERSIMAGE[4] = new Image();
+                    FAMILYMEMBERSIMAGE[4].src = "Kaka.jpeg";
+
+                    FAMILYMEMBERSIMAGE[5] = new Image();
+                    FAMILYMEMBERSIMAGE[5].src = "abhirupwithorangeshirt.png";
+                    var NEXTSLIDE2=0;
+                    var updatedimage=0;
+                    function NEXTSLIDE() {
+                        NEXTSLIDE1++;
+                        {
+                            if(NEXTSLIDE1>5)
+                            {
+                                NEXTSLIDE1=0;
+
+                            }
+                            var updatedname=FAMILYMEMBERSNAME[NEXTSLIDE1];
+                            console.log(updatedname);
+                            document.getElementById("FAMILY MEMBER NAME").innerHTML=updatedname;
+                            var updatedimage=FAMILYMEMBERSIMAGE[NEXTSLIDE1].src;
+                            console.log(updatedimage);
+                            document.getElementById("FAMILYMEMBERSIMAGE").src = updatedimage;
+
+                        }
+                    }
+                </script>
+            </body>
